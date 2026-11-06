@@ -1,0 +1,15 @@
+! ===== SW2 (Cisco IOSvL2, IOS 15.2) - IP de gestion y SNMP RO =====
+enable
+configure terminal
+hostname SW2
+no ip domain-lookup
+interface vlan 1
+ ip address 10.20.35.3 255.255.255.0
+ no shutdown
+ exit
+ip default-gateway 10.20.35.1
+snmp-server community Zabbix2025 RO
+snmp-server location Lab-ITLA-2025-0035
+snmp-server contact gregorys.morel
+end
+write memory

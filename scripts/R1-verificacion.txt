@@ -1,0 +1,4 @@
+! Comandos de verificacion usados en R1
+show ip dhcp binding
+show snmp community
+show running-config

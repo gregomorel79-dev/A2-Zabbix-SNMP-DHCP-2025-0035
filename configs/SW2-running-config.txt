@@ -1,0 +1,75 @@
+Building configuration...
+
+Current configuration : 3026 bytes
+!
+! Last configuration change at 04:56:26 UTC Fri Nov 6 2026
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname SW2
+!
+boot-start-marker
+boot-end-marker
+!
+no aaa new-model
+!
+no ip domain-lookup
+ip cef
+no ipv6 cef
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface GigabitEthernet0/0
+ negotiation auto
+!
+interface GigabitEthernet0/1
+ negotiation auto
+!
+interface GigabitEthernet0/2
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ negotiation auto
+!
+interface Vlan1
+ ip address 10.20.35.3 255.255.255.0
+!
+ip default-gateway 10.20.35.1
+ip forward-protocol nd
+!
+ip http server
+ip http secure-server
+!
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+snmp-server community Zabbix2025 RO
+snmp-server location Lab-ITLA-2025-0035
+snmp-server contact gregorys.morel
+!
+control-plane
+!
+(banners exec / incoming / login: aviso de licencia de IOSv, omitidos por brevedad)
+!
+line con 0
+line aux 0
+line vty 0 4
+!
+end

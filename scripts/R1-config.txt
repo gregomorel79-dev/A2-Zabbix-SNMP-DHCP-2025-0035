@@ -1,0 +1,21 @@
+! ===== R1 (Cisco 7200, IOS 15.2) - Direccionamiento, DHCP y SNMP RO =====
+enable
+configure terminal
+hostname R1
+no ip domain-lookup
+interface FastEthernet0/0
+ ip address 10.20.35.1 255.255.255.0
+ no shutdown
+ exit
+ip dhcp excluded-address 10.20.35.1 10.20.35.99
+ip dhcp pool LAN-2025-0035
+ network 10.20.35.0 255.255.255.0
+ default-router 10.20.35.1
+ dns-server 8.8.8.8
+ lease 1
+ exit
+snmp-server community Zabbix2025 RO
+snmp-server location Lab-ITLA-2025-0035
+snmp-server contact gregorys.morel
+end
+write memory
