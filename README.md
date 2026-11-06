@@ -19,11 +19,13 @@ Desde el punto de vista de seguridad, SNMP de solo lectura da visibilidad (monit
 
 ## 2. Topología y direccionamiento (basado en la matrícula)
 
-![Topología](img/01-topologia.png)
+**Topología en GNS3** (R1 – SW1 – SW2 – Zabbix; el nodo *Cloud* en SW1 conecta la PC para abrir la web de Zabbix):
 
-**Topología real en GNS3** (R1 – SW1 – SW2 – Zabbix; el nodo *Cloud* en SW1 conecta la PC para abrir la web de Zabbix):
+![Topología GNS3](img/01-gns3-topologia.png)
 
-![GNS3](img/05-gns3-topologia.png)
+**Diagrama lógico** (direccionamiento, flujo DHCP y consultas SNMP):
+
+![Diagrama](img/05-diagrama-topologia.png)
 
 El direccionamiento se deriva de la matrícula **2025-0035**: red **10.20.35.0/24** → `20` = año de la matrícula (2025) y `35` = número de la matrícula (0035).
 
