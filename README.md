@@ -1,6 +1,6 @@
 # A2 · DHCP + SNMP de solo lectura + monitoreo con Zabbix
 
-> ▶️ **Video de la demostración:** _(pendiente: pegar aquí el enlace de YouTube)_
+> ▶️ **Video de la demostración:** https://youtu.be/xYU8u299YPc
 
 **Estudiante:** Gregorys Morel Duluc · **Matrícula:** 2025-0035 · **Materia:** Seguridad de Redes · **ITLA**
 
